@@ -24,14 +24,11 @@ class MaestroPizzero:
             self.pizzasPorEntregar = self.pizzasPorCocinar
     
     def entregar(self):
-        entregadas = list()
-        if len(self.pizzasPorEntregar)>1:
-            for i in range(2):
-                pizza = self.pizzasPorEntregar.pop(0)
-                entregadas.append(pizza) 
-        elif len(self.pizzasPorEntregar)==1:
-            pizza = self.pizzasPorEntregar.pop()
-            entregadas.append(pizza)
+        f1 = lambda x:x[0]<2
+        f2 = lambda x:x[1]
+        f3 = lambda x,y: y.remove(x)
+        entregadas = list(map(f2,filter(f1,enumerate(self.pizzasPorEntregar))))
+        list(map(lambda x: f3(x,self.pizzasPorEntregar),entregadas))
         return entregadas
 
     # consultas

@@ -7,18 +7,21 @@ class Mozo:
     def __init__(self,nombre):
         # atributos de instancia
          self.nombre = nombre
-         self.pizzas = Pizza('primavera')
+         self.pizzas = list()
        
-    
     # comandos
-    def getNombre(self,nombre):
+    def setNombre(self,nombre):
         self.nombre = nombre
     
     def tomarPizzas(self,pizzas):
-        self.pizzas = pizzas
+        # requiere pizzas ligado
+        i=0
+        while self.isEstadoLibre():
+            self.pizzas.append(pizzas[i])
+            i+=1
 
     def servirPizzas(self):
-        pass
+        self.pizzas.clear()
     
     # consultas
     def getNombre(self) -> str:
@@ -28,5 +31,7 @@ class Mozo:
         return self.pizzas
     
     def isEstadoLibre(self)->bool:
-        return True
+        if len(self.pizzas)<2:
+            return True
+        return False
     
