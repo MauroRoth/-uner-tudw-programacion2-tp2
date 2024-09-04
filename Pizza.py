@@ -1,10 +1,9 @@
 class Pizza:
     # atributos de clase
-    # atributos de instancia
-    variedad = str
 
-    # constructor
+    # método de inicialización
     def __init__(self,variedad):
+        # atributos de instancia
         self.variedad = variedad
     
     # comandos

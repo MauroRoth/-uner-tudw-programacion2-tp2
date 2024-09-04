@@ -1,14 +1,14 @@
-import Pizza
+from Pizza import Pizza
 
 class Mozo:
     # atributos de clase
-    # atributos de instancia
-    nombre = ''
-    pizzas = Pizza()
 
-    # constructor
+    # método de inicialización
     def __init__(self,nombre):
-        self.nombre = nombre
+        # atributos de instancia
+         self.nombre = nombre
+         self.pizzas = Pizza('primavera')
+       
     
     # comandos
     def getNombre(self,nombre):
