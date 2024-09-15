@@ -16,7 +16,7 @@ class Mozo:
     def tomarPizzas(self,pizzas):
         # requiere pizzas ligado
         i=0
-        while self.isEstadoLibre():
+        while self.isEstadoLibre() and len(pizzas)>len(self.pizzas):
             self.pizzas.append(pizzas[i])
             i+=1
 
