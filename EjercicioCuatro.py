@@ -7,7 +7,7 @@ print('mozo2 = Mozo("Alfredo")')
 mozo1 = Mozo('Alfredo')
 mozo2 = Mozo('Alfredo')
 
-print('Luego, responda lo siguiente:')
+print('Luego, responda lo siguiente: ')
 
 print('i.')
 print('¿Los identificadores mozo1 y mozo2 hacen referencia al mismo objeto?')
